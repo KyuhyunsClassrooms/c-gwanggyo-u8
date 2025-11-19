@@ -1,36 +1,38 @@
 #include <stdio.h>
-
-/*
-    1. [설계]에서 정의한 변수, 배열, (필요하면) 구조체를 여기에 선언하세요.
-    
-    예시 - 배열 사용:
-    char names[100][20];
-    int scores[100];
-    int count = 0;
-    
-    예시 - 구조체 사용 (선택):
-    struct Student {
-        char name[20];
-        int score;
-    };
-    struct Student students[100];
-*/
-
-
-/*
-    2. [알고리즘]에서 설계한 핵심 기능 함수들을 여기에 선언하세요.
-*/
+#include <stdlib.h>
+#include <time.h>
 
 
 int main() {
-    
-    printf("--- C언어 미니 프로젝트 시작! ---\n");
+    int player, computer;
+    int win=0;
+    int lose=0;
+    srand(time(NULL));
 
-    /*
-        3. [알고리즘]에서 설계한 main 함수의 흐름을
-           여기에 C언어로 자유롭게 구현하세요.
-    */
+    printf("컴퓨터와 대결하는 가위바위보 게임\n");
+    printf("1:가위, 2:바위, 3:보, 0:종료\n\n");
+
+    while (1)
+    {
+        pintf("당신의 선택은?: ");
+        scanf("%d", &player);
+
+        if(player==0)
+        {
+            printf("게임을 종료합니다.\n");
+            break;
+        }
+
+        if(player<1||player>3)
+        {
+            pintf("잘못된 입력입니다. 1~3 중에서 선택해주세요.\n\n");
+            continue;
+        }
+        
+    }
+
     
+  
     
     return 0;
 }
