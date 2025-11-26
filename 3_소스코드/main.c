@@ -38,8 +38,7 @@ int main() {
 
         if(player==computer)
         {
-            printf("비겼어요.\n");
-            printf("\n");
+            printf("비겼어요.\n\n");
             win=0;
             lose=0;
         }
@@ -69,7 +68,7 @@ int main() {
         else
         {
             printf("컴퓨터가 이겼어요.\n");
-            lose=++;
+            lose++;
             win=0;
 
             if(lose==2)
