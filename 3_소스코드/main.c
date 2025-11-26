@@ -7,6 +7,7 @@ int main() {
     int player, computer;
     int win=0;
     int lose=0;
+    int same=0;
     srand(time(NULL));
 
     printf("컴퓨터와 대결하는 가위바위보 게임\n");
@@ -41,6 +42,20 @@ int main() {
             printf("비겼어요.\n\n");
             win=0;
             lose=0;
+            same++;
+            if(same==2)
+            {
+                printf("비겼어요! 오늘 마음이 잘 통하는데요?\n");
+            }
+            else if(same==5)
+            {
+                printf("또 비겼어요! 우린 운명??\n");
+            }
+            else
+            {
+                printf("\n");
+            }
+
         }
 
         else if((player==1&&computer==3)||(player==2&&computer==1)||(player==3&&computer==2))
@@ -48,6 +63,7 @@ int main() {
             printf("당신이 이겼어요!\n");
             win++;
             lose=0;
+            same=0;
 
             if(win==3)
             {
@@ -70,6 +86,7 @@ int main() {
             printf("컴퓨터가 이겼어요.\n");
             lose++;
             win=0;
+            same=0;
 
             if(lose==2)
             {
